@@ -56,6 +56,11 @@ bundle exec middleman server
 vagrant up
 ```
 
+```shell
+# To build the static documentation
+bundle exec middleman build --clean
+```
+
 You can now see the docs at http://localhost:4567. Whoa! That was fast!
 
 Now that Slate is all set up on your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/lord/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/lord/slate/wiki/Deploying-Slate).
