@@ -9,7 +9,8 @@ language_tabs:
   - ruby: Ruby
   - java: Java
 toc_footers: []
-includes: []
+includes:
+   - errors
 search: true
 highlight_theme: darkula
 ---
