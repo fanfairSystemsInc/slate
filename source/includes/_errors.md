@@ -1,6 +1,6 @@
 # Errors
 
-The Amplify API uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that failed given the information provided and codes in the 5xx range indicate an error with Amplify’s servers (these are quite rare):
+The Amplify API uses conventional HTTP response codes to indicate the success or failure of an API request. Codes in the 4xx range indicate an error that failed given the information provided and codes in the 5xx range indicate an error with Amplify’s servers (these are quite rare):
 
 
 Error Code | Meaning
