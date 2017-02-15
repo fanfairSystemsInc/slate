@@ -13,6 +13,8 @@
   "devDependencies": {
   },
   "scripts": {
-    "deploy": "surge --domain iqx-amplify-slate-2-api-docs.surge.sh ./build"
+    "deploy": "surge --domain iqx-amplify-slate-2-api-docs.surge.sh ./build",
+    "start": "bundle exec middleman server",
+    "build": "bundle exec middleman build --clean"
   }
 }
