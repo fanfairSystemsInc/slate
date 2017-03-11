@@ -1,4 +1,4 @@
-# Introduction
+# Webhooks
 
 The webhooks are used in response to certain actions within Amplify. For example if an order is occuring, we will send a request to your webhook address asking for your system to process the order.
 
