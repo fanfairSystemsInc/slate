@@ -11,6 +11,7 @@ language_tabs:
 toc_footers: []
 includes:
    - errors
+   - webhooks
 search: true
 highlight_theme: darkula
 ---
@@ -21,7 +22,7 @@ Welcome to the iQX Amplify API reference. This is a live example of how you can 
 
 The iQX Amplify API is organized around the [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) mothodology, and it uses resource-oriented URLs, and common HTTP response codes to indicate API errors. All requests are authenticated using an `api-key` which can be obtained from your developer dashboard within iQX Amplify.
 
-Base URL = http://localhost:10010/V1
+Base URL = http://public-api.iqxamplify.com/V1
 
 <a href="https://documents.iqxamplify.com/termsofservice">Terms of service</a>
 Email: <a href="mailto:development@iqxcorp.com">Support</a>
