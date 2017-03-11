@@ -23,3 +23,8 @@ _yardoc
 doc/
 .idea/
 node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
