@@ -12,17 +12,20 @@ toc_footers: []
 includes:
    - errors
    - webhooks
+   - codesnippet
 search: true
 highlight_theme: darkula
 ---
 
 # iQX Amplify API Reference v1.0.0
 
-Welcome to the iQX Amplify API reference. This is a live example of how you can use [iQX Amplify](http://app.iqxamplify.com/) to integrate your own e-commerce store or ticketing engine.
+Welcome to the iQX Amplify API reference. This is a live example of how you can use [iQX Amplify](https://developer-app.iqxamplify.com/) to integrate your own e-commerce store or ticketing engine.
 
 The iQX Amplify API is organized around the [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer) mothodology, and it uses resource-oriented URLs, and common HTTP response codes to indicate API errors. All requests are authenticated using an `api-key` which can be obtained from your developer dashboard within iQX Amplify.
 
-<a href="https://public-api.iqxamplify.com/V1">Base URL</a>
+<a href="https://public-api.iqxamplify.com/V1/">Base URL</a>
+
+<a href="https://sandbox-public-api.iqxamplify.com/V1/">Sandbox Base URL</a>
 
 <a href="https://documents.iqxamplify.com/termsofservice">Terms of service</a>
 Email: <a href="mailto:development@iqxcorp.com">Support</a>
@@ -46,12 +49,12 @@ Store methods provide access to information and operations relating to the store
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/stores/
+curl -X get https://public-api.iqxamplify.com/V1/stores/
 ````
 
 ````http
-GET http://localhost:10010/V1/stores/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/stores/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -59,7 +62,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/stores/',
+    url: 'https://public-api.iqxamplify.com/V1/stores/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -70,7 +73,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/stores/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/stores/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -82,7 +85,7 @@ fetch('http://localhost:10010/V1/stores/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/stores/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/stores/', params:
   {
     # TODO
   }
@@ -93,7 +96,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/stores/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/stores/', params={
   # TODO
 })
 
@@ -101,7 +104,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/stores/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/stores/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -162,12 +165,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/stores/
+curl -X post https://public-api.iqxamplify.com/V1/stores/
 ````
 
 ````http
-POST http://localhost:10010/V1/stores/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/stores/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -175,7 +178,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/stores/',
+    url: 'https://public-api.iqxamplify.com/V1/stores/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -186,7 +189,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/stores/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/stores/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -198,7 +201,7 @@ fetch('http://localhost:10010/V1/stores/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/stores/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/stores/', params:
   {
     # TODO
   }
@@ -209,7 +212,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/stores/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/stores/', params={
   # TODO
 })
 
@@ -217,7 +220,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/stores/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/stores/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -302,12 +305,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/stores/{id}
+curl -X get https://public-api.iqxamplify.com/V1/stores/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/stores/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/stores/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -315,7 +318,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/stores/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/stores/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -326,7 +329,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/stores/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/stores/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -338,7 +341,7 @@ fetch('http://localhost:10010/V1/stores/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/stores/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/stores/{id}', params:
   {
     # TODO
   }
@@ -349,7 +352,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/stores/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/stores/{id}', params={
   # TODO
 })
 
@@ -357,7 +360,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/stores/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/stores/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -428,12 +431,12 @@ Customers methods provide access to information and operations relating to the c
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/customers/
+curl -X get https://public-api.iqxamplify.com/V1/customers/
 ````
 
 ````http
-GET http://localhost:10010/V1/customers/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/customers/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -441,7 +444,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/customers/',
+    url: 'https://public-api.iqxamplify.com/V1/customers/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -452,7 +455,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/customers/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/customers/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -464,7 +467,7 @@ fetch('http://localhost:10010/V1/customers/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/customers/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/customers/', params:
   {
     # TODO
   }
@@ -475,7 +478,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/customers/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/customers/', params={
   # TODO
 })
 
@@ -483,7 +486,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/customers/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/customers/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -558,12 +561,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/customers/
+curl -X post https://public-api.iqxamplify.com/V1/customers/
 ````
 
 ````http
-POST http://localhost:10010/V1/customers/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/customers/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -571,7 +574,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/customers/',
+    url: 'https://public-api.iqxamplify.com/V1/customers/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -582,7 +585,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/customers/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/customers/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -594,7 +597,7 @@ fetch('http://localhost:10010/V1/customers/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/customers/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/customers/', params:
   {
     # TODO
   }
@@ -605,7 +608,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/customers/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/customers/', params={
   # TODO
 })
 
@@ -613,7 +616,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/customers/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/customers/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -726,12 +729,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/customers/{id}
+curl -X get https://public-api.iqxamplify.com/V1/customers/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/customers/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/customers/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -739,7 +742,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/customers/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/customers/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -750,7 +753,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/customers/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/customers/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -762,7 +765,7 @@ fetch('http://localhost:10010/V1/customers/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/customers/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/customers/{id}', params:
   {
     # TODO
   }
@@ -773,7 +776,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/customers/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/customers/{id}', params={
   # TODO
 })
 
@@ -781,7 +784,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/customers/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/customers/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -866,12 +869,12 @@ Products methods provide access to information and operations relating to the pr
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/products/
+curl -X get https://public-api.iqxamplify.com/V1/products/
 ````
 
 ````http
-GET http://localhost:10010/V1/products/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/products/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -879,7 +882,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/products/',
+    url: 'https://public-api.iqxamplify.com/V1/products/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -890,7 +893,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/products/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/products/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -902,7 +905,7 @@ fetch('http://localhost:10010/V1/products/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/products/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/products/', params:
   {
     # TODO
   }
@@ -913,7 +916,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/products/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/products/', params={
   # TODO
 })
 
@@ -921,7 +924,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/products/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/products/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1022,12 +1025,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/products/
+curl -X post https://public-api.iqxamplify.com/V1/products/
 ````
 
 ````http
-POST http://localhost:10010/V1/products/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/products/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1035,7 +1038,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/products/',
+    url: 'https://public-api.iqxamplify.com/V1/products/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1046,7 +1049,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/products/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/products/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1058,7 +1061,7 @@ fetch('http://localhost:10010/V1/products/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/products/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/products/', params:
   {
     # TODO
   }
@@ -1069,7 +1072,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/products/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/products/', params={
   # TODO
 })
 
@@ -1077,7 +1080,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/products/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/products/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -1242,12 +1245,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/products/{id}
+curl -X get https://public-api.iqxamplify.com/V1/products/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/products/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/products/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1255,7 +1258,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/products/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/products/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1266,7 +1269,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/products/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/products/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1278,7 +1281,7 @@ fetch('http://localhost:10010/V1/products/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/products/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/products/{id}', params:
   {
     # TODO
   }
@@ -1289,7 +1292,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/products/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/products/{id}', params={
   # TODO
 })
 
@@ -1297,7 +1300,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/products/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/products/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1408,12 +1411,12 @@ Orders methods provide access to information and operations relating to the orde
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/orders/
+curl -X get https://public-api.iqxamplify.com/V1/orders/
 ````
 
 ````http
-GET http://localhost:10010/V1/orders/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/orders/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1421,7 +1424,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/orders/',
+    url: 'https://public-api.iqxamplify.com/V1/orders/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1432,7 +1435,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/orders/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/orders/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1444,7 +1447,7 @@ fetch('http://localhost:10010/V1/orders/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/orders/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/orders/', params:
   {
     # TODO
   }
@@ -1455,7 +1458,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/orders/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/orders/', params={
   # TODO
 })
 
@@ -1463,7 +1466,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/orders/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/orders/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1538,12 +1541,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/orders/
+curl -X post https://public-api.iqxamplify.com/V1/orders/
 ````
 
 ````http
-POST http://localhost:10010/V1/orders/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/orders/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1551,7 +1554,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/orders/',
+    url: 'https://public-api.iqxamplify.com/V1/orders/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1562,7 +1565,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/orders/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/orders/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1574,7 +1577,7 @@ fetch('http://localhost:10010/V1/orders/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/orders/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/orders/', params:
   {
     # TODO
   }
@@ -1585,7 +1588,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/orders/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/orders/', params={
   # TODO
 })
 
@@ -1593,7 +1596,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/orders/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/orders/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -1706,12 +1709,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/orders/{id}
+curl -X get https://public-api.iqxamplify.com/V1/orders/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/orders/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/orders/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1719,7 +1722,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/orders/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/orders/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1730,7 +1733,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/orders/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/orders/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1742,7 +1745,7 @@ fetch('http://localhost:10010/V1/orders/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/orders/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/orders/{id}', params:
   {
     # TODO
   }
@@ -1753,7 +1756,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/orders/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/orders/{id}', params={
   # TODO
 })
 
@@ -1761,7 +1764,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/orders/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/orders/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1846,12 +1849,12 @@ Events methods provide access to information and operations relating to the even
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/events/
+curl -X get https://public-api.iqxamplify.com/V1/events/
 ````
 
 ````http
-GET http://localhost:10010/V1/events/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/events/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -1859,7 +1862,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/',
+    url: 'https://public-api.iqxamplify.com/V1/events/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -1870,7 +1873,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/events/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -1882,7 +1885,7 @@ fetch('http://localhost:10010/V1/events/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/events/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/events/', params:
   {
     # TODO
   }
@@ -1893,7 +1896,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/events/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/events/', params={
   # TODO
 })
 
@@ -1901,7 +1904,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -1998,12 +2001,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/events/
+curl -X post https://public-api.iqxamplify.com/V1/events/
 ````
 
 ````http
-POST http://localhost:10010/V1/events/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/events/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2011,7 +2014,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/',
+    url: 'https://public-api.iqxamplify.com/V1/events/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2022,7 +2025,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/events/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2034,7 +2037,7 @@ fetch('http://localhost:10010/V1/events/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/events/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/events/', params:
   {
     # TODO
   }
@@ -2045,7 +2048,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/events/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/events/', params={
   # TODO
 })
 
@@ -2053,7 +2056,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -2210,12 +2213,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/events/{id}
+curl -X get https://public-api.iqxamplify.com/V1/events/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/events/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/events/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2223,7 +2226,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/events/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2234,7 +2237,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/events/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2246,7 +2249,7 @@ fetch('http://localhost:10010/V1/events/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/events/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/events/{id}', params:
   {
     # TODO
   }
@@ -2257,7 +2260,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/events/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/events/{id}', params={
   # TODO
 })
 
@@ -2265,7 +2268,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2370,12 +2373,12 @@ Event Tickets methods provide access to information and operations relating to t
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/events/{id}/tickets/
+curl -X get https://public-api.iqxamplify.com/V1/events/{id}/tickets/
 ````
 
 ````http
-GET http://localhost:10010/V1/events/{id}/tickets/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/events/{id}/tickets/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2383,7 +2386,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/{id}/tickets/',
+    url: 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2394,7 +2397,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/{id}/tickets/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/events/{id}/tickets/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2406,7 +2409,7 @@ fetch('http://localhost:10010/V1/events/{id}/tickets/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/events/{id}/tickets/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/', params:
   {
     # TODO
   }
@@ -2417,7 +2420,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/events/{id}/tickets/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/events/{id}/tickets/', params={
   # TODO
 })
 
@@ -2425,7 +2428,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/{id}/tickets/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/{id}/tickets/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2500,12 +2503,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/events/{id}/tickets/
+curl -X post https://public-api.iqxamplify.com/V1/events/{id}/tickets/
 ````
 
 ````http
-POST http://localhost:10010/V1/events/{id}/tickets/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/events/{id}/tickets/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2513,7 +2516,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/{id}/tickets/',
+    url: 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2524,7 +2527,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/{id}/tickets/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/events/{id}/tickets/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2536,7 +2539,7 @@ fetch('http://localhost:10010/V1/events/{id}/tickets/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/events/{id}/tickets/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/', params:
   {
     # TODO
   }
@@ -2547,7 +2550,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/events/{id}/tickets/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/events/{id}/tickets/', params={
   # TODO
 })
 
@@ -2555,7 +2558,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/{id}/tickets/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/{id}/tickets/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -2653,12 +2656,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/
+curl -X get https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/
 ````
 
 ````http
-GET http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2666,7 +2669,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/',
+    url: 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2677,7 +2680,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2689,7 +2692,7 @@ fetch('http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/', { method: '
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/', params:
   {
     # TODO
   }
@@ -2700,7 +2703,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/', params={
   # TODO
 })
 
@@ -2708,7 +2711,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/events/{id}/tickets/{tickets_id}/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/events/{id}/tickets/{tickets_id}/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2786,12 +2789,12 @@ Tickets methods provide access to information and operations relating to the tic
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/tickets/
+curl -X get https://public-api.iqxamplify.com/V1/tickets/
 ````
 
 ````http
-GET http://localhost:10010/V1/tickets/ HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/tickets/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2799,7 +2802,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/tickets/',
+    url: 'https://public-api.iqxamplify.com/V1/tickets/',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2810,7 +2813,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/tickets/', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/tickets/', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2822,7 +2825,7 @@ fetch('http://localhost:10010/V1/tickets/', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/tickets/', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/tickets/', params:
   {
     # TODO
   }
@@ -2833,7 +2836,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/tickets/', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/tickets/', params={
   # TODO
 })
 
@@ -2841,7 +2844,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/tickets/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/tickets/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
@@ -2938,12 +2941,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X post http://localhost:10010/V1/tickets/
+curl -X post https://public-api.iqxamplify.com/V1/tickets/
 ````
 
 ````http
-POST http://localhost:10010/V1/tickets/ HTTP/1.1
-Host: localhost:10010
+POST https://public-api.iqxamplify.com/V1/tickets/ HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -2951,7 +2954,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/tickets/',
+    url: 'https://public-api.iqxamplify.com/V1/tickets/',
     method: 'post',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -2962,7 +2965,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/tickets/', { method: 'POST'})
+fetch('https://public-api.iqxamplify.com/V1/tickets/', { method: 'POST'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -2974,7 +2977,7 @@ fetch('http://localhost:10010/V1/tickets/', { method: 'POST'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.post 'http://localhost:10010/V1/tickets/', params:
+result = RestClient.post 'https://public-api.iqxamplify.com/V1/tickets/', params:
   {
     # TODO
   }
@@ -2985,7 +2988,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.post('http://localhost:10010/V1/tickets/', params={
+r = requests.post('https://public-api.iqxamplify.com/V1/tickets/', params={
   # TODO
 })
 
@@ -2993,7 +2996,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/tickets/");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/tickets/");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("POST");
 int responseCode = con.getResponseCode();
@@ -3120,12 +3123,12 @@ apiKey
 
 ````shell
 # You can also use wget
-curl -X get http://localhost:10010/V1/tickets/{id}
+curl -X get https://public-api.iqxamplify.com/V1/tickets/{id}
 ````
 
 ````http
-GET http://localhost:10010/V1/tickets/{id} HTTP/1.1
-Host: localhost:10010
+GET https://public-api.iqxamplify.com/V1/tickets/{id} HTTP/1.1
+Host: public-api.iqxamplify.com
 Content-Type: application/json
 Accept: application/json
 ````
@@ -3133,7 +3136,7 @@ Accept: application/json
 ````html
 <script>
   $.ajax({
-    url: 'http://localhost:10010/V1/tickets/{id}',
+    url: 'https://public-api.iqxamplify.com/V1/tickets/{id}',
     method: 'get',
     success: function(data) {
       console.log(JSON.stringify(data));
@@ -3144,7 +3147,7 @@ Accept: application/json
 
 ````javascript
 const request = require('node-fetch');
-fetch('http://localhost:10010/V1/tickets/{id}', { method: 'GET'})
+fetch('https://public-api.iqxamplify.com/V1/tickets/{id}', { method: 'GET'})
 .then(function(res) {
     return res.json();
 }).then(function(body) {
@@ -3156,7 +3159,7 @@ fetch('http://localhost:10010/V1/tickets/{id}', { method: 'GET'})
 require 'rest-client'
 require 'json'
 
-result = RestClient.get 'http://localhost:10010/V1/tickets/{id}', params:
+result = RestClient.get 'https://public-api.iqxamplify.com/V1/tickets/{id}', params:
   {
     # TODO
   }
@@ -3167,7 +3170,7 @@ p JSON.parse(result)
 ````python
 import requests
 
-r = requests.get('http://localhost:10010/V1/tickets/{id}', params={
+r = requests.get('https://public-api.iqxamplify.com/V1/tickets/{id}', params={
   # TODO
 })
 
@@ -3175,7 +3178,7 @@ print r.json()
 ````
 
 ````java
-URL obj = new URL("http://localhost:10010/V1/tickets/{id}");
+URL obj = new URL("https://public-api.iqxamplify.com/V1/tickets/{id}");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
